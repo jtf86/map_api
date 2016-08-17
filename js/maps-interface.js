@@ -1,6 +1,8 @@
 // var apiKey ="AIzaSyCJxNyV0FOTUFGQiRMErgGOFbmbOm64fhs";
 
 var Map=require("./../js/maps.js").mapsModule;
+var apiKey = require('./../.env').apiKey;
+
 
 function initMap() {
   var mapDiv = document.getElementById('map');
@@ -13,14 +15,13 @@ function initMap() {
 
 
 $(document).ready(function(){
-  initMap();
   console.log("APP.JS WORKS");
-
+  initMap();
   $("#input-form").click(function(){
     var city = ('#location').val();
 
   });
-  
+
   $("#time").text(moment());
 
   // $(document).ready(function(){
